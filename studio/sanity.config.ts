@@ -2,6 +2,7 @@
  * This config is used to configure your Sanity Studio.
  * Learn more: https://www.sanity.io/docs/configuration
  */
+"use client";
 
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
@@ -18,7 +19,7 @@ import {
 import {assist} from '@sanity/assist'
 
 // Environment variables for project configuration
-const projectId = process.env.SANITY_STUDIO_PROJECT_ID || 'your-projectID'
+const projectId = process.env.SANITY_STUDIO_PROJECT_ID || '867gncpa'
 const dataset = process.env.SANITY_STUDIO_DATASET || 'production'
 
 // URL for preview functionality, defaults to localhost:3000 if not set
@@ -48,7 +49,7 @@ function resolveHref(documentType?: string, slug?: string): string | undefined {
 export default defineConfig({
   name: 'default',
   title: 'Clean Next.js + Sanity',
-
+  basePath: "/studio",
   projectId,
   dataset,
 
