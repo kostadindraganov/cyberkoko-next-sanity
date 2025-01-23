@@ -23,7 +23,7 @@ const projectId = process.env.SANITY_STUDIO_PROJECT_ID || '867gncpa'
 const dataset = process.env.SANITY_STUDIO_DATASET || 'production'
 
 // URL for preview functionality, defaults to localhost:3000 if not set
-const SANITY_STUDIO_PREVIEW_URL = process.env.SANITY_STUDIO_PREVIEW_URL || 'http://localhost:3000'
+const SANITY_STUDIO_PREVIEW_URL = process.env.SANITY_STUDIO_PREVIEW_URL || 'https://cyberkoko-next-sanity-nextjs-app.vercel.app'
 
 // Define the home location for the presentation tool
 const homeLocation = {
