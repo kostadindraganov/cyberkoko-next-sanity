@@ -1,6 +1,3 @@
-import { Suspense } from "react";
-import Link from "next/link";
-
 import About from '@/app/components/About'
 import Contact from '@/app/components/Contact'
 import Features from '@/app/components/Features'
@@ -12,11 +9,14 @@ import Glance from '@/app/components/Glance'
 import Labels from '@/app/components/Labels'
 import Updates from '@/app/components/Updates'
 
-export default async function Page() {
+
+export default  function Page() {
   return (
-    <>
+    
+ 
+      <>
        <Hero />
-       <About />
+       {/* <About />
        <Features />
        <FloatingImage />
        <Universe />
@@ -24,8 +24,11 @@ export default async function Page() {
        <Glance />
        <Labels />
        <Updates />
-       <Contact />
-    </>
+       <Contact /> */}
+      </>
+       
+       
 
   );
 }
+

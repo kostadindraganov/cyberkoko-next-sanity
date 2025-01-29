@@ -15,13 +15,6 @@ import { settingsQuery } from "@/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@/sanity/lib/utils";
 import { handleError } from "./client-utils";
 
-
-import NavBar from '@/app/components/Navbar'
-import Footer from '@/app/components/Footer'
-
-
-
-
 /**
  * Generate metadata for the page.
  * Learn more: https://nextjs.org/docs/app/api-reference/functions/generate-metadata#generatemetadata-function
