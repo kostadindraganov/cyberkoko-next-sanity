@@ -3,17 +3,25 @@ import React from "react";
 import Cta from "@/app/components/Cta";
 import Info from "@/app/components/InfoSection";
 import { dataAttr } from "@/sanity/lib/utils";
+import { CallToAction } from "@/sanity.types";
 
-type BlocksType = {
-  [key: string]: React.FC<any>;
+type BlockComponentProps<T = any> = {
+  key: string;
+  block: T;
+  index: number;
 };
 
-type BlockType = {
+type BlocksType = {
+  callToAction: React.ComponentType<BlockComponentProps<CallToAction>>;
+  infoSection: React.ComponentType<BlockComponentProps<any>>;
+};
+
+type BlockType = CallToAction & {
   _type: string;
   _key: string;
 };
 
-type BlockProps = {
+type BlockRendererProps = {
   index: number;
   block: BlockType;
   pageId: string;
@@ -33,7 +41,7 @@ export default function BlockRenderer({
   index,
   pageId,
   pageType,
-}: BlockProps) {
+}: BlockRendererProps) {
   // Block does exist
   if (typeof Blocks[block._type] !== "undefined") {
     return (
@@ -47,8 +55,8 @@ export default function BlockRenderer({
       >
         {React.createElement(Blocks[block._type], {
           key: block._key,
-          block: block,
-          index: index,
+          block,
+          index,
         })}
       </div>
     );
